@@ -30,7 +30,7 @@ void AgeInput(int iage[SIZE])
     // Take input
     for(int i = 0; i < SIZE; i ++)
     {
-        cout << "Enter age " << i << ":";
+        cout << "Enter age " << i+1 << ": ";
         cin >> iage[i];
     }
     cout << endl;
@@ -41,6 +41,6 @@ void DisplayAge(int iage[SIZE])
 {
     for(int i = 0; i < SIZE; i ++)
     {
-        cout << "Age " << i << " is " << iage[i] << endl;
+        cout << "Age " << i+1 << " is " << iage[i] << endl;
     }
 }
