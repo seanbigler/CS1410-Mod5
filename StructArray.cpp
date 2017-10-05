@@ -3,6 +3,7 @@
 // Copyright (c) 2017 WSU
 //
 #include <iostream>
+#include <string>
 
 using namespace std;
 // Constants, Structs, Classes
@@ -11,6 +12,8 @@ struct Part
     int modelNum;
     int partNum;
     float cost;
+    string partName;
+
 };
 
 const int SIZE = 4;
@@ -35,6 +38,9 @@ void PartInput(Part pi[SIZE])
     for(int i = 0; i < SIZE; i++)
     {
         cout << "For part " << i+1 << endl;
+        cout << "Enter the part name: ";
+        getline(cin, pi[i].partName);
+        // TO DO I need to flush my input, but HOW???
         cout << "Enter the model number: ";
         cin >> pi[i].modelNum;
         cout << "Enter the part number: ";
@@ -42,6 +48,8 @@ void PartInput(Part pi[SIZE])
         cout << "Enter the cost: ";
         cin >> pi[i].cost;
         cout << endl;
+
+
     }
 }
 
@@ -53,6 +61,7 @@ void DisplayPart(Part pi[SIZE])
         cout << "Model number: " << pi[i].modelNum << endl;
         cout << "Part number: " << pi[i].partNum << endl;
         cout << "Cost: " << pi[i].cost << endl;
+        cout << "Part name: " << pi[i].partName << endl;
         cout << endl;
     }
 }
